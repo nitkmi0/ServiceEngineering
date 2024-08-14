@@ -1,0 +1,654 @@
+$sp: 768px;
+
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #444;
+    font-style: normal;
+    line-height: normal;
+    // width: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    // text-align: center;
+    @include sp {
+        padding: 0 4%;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    // background-color: aqua;
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    
+
+    .header-inner {
+        // background-color: orange;
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include sp {
+            padding: 0;
+        }
+
+        .phone a {
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        &-right {
+            // background-color: aquamarine;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        &-time {
+            font-size: 14px;
+            font-weight: 400;
+            @include sp {
+                text-align: center;
+                span {
+                    display: block;
+                }
+            }
+        }
+
+
+    }
+}
+
+.bg {
+    width: 100%;
+    height: 947px;
+    background: url(../images/hospital-background.jpg), lightgray 50% / cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 133px;
+    padding-left: 11%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 80px;
+    @include sp {
+        background-position: 70%;
+        height: 600px;
+        gap: 40px;
+        padding-top: 35px;
+        padding-left: 5%;
+        padding-bottom: 5%;
+    }
+
+    &-message {
+        writing-mode: vertical-rl;
+        background: #FFF;
+        width: 102px;
+        height: 565px;
+        padding: 18px 37px 0 37px;
+        font-feature-settings: 'vert' on;
+        font-size: 28px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        span {
+            color: #21A937;
+        }
+        @include sp {
+            // background-color: #21A937;
+            width: 20px;
+            height: 450px;
+            font-size: 24px;
+        }
+    }
+}
+
+.explain {
+    // background-color: aqua;
+    display: flex;
+    gap: 20px;
+    padding-top: 162px;
+    padding-bottom: 82px;
+    @include sp {
+        padding-top: 80px;
+    }
+
+    &-left {
+        // background-color: gray;
+        width: 100%;
+        padding-top: 31px;
+        margin-left: 3%;
+        flex-basis: 40%;
+    }
+
+    .message-main-under {
+        padding-bottom: 37px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &-sub {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 240%;
+
+        /* 38.4px */
+        span {
+            display: block;
+        }
+    }
+
+    &-right {
+        // background-color: red;
+        width: 65%;
+        @include sp {
+            width: 100%;
+        }
+        &-photo {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.care {
+    background-color: #F5FCF8;
+
+    &-title {
+        padding-top: 76px;
+        padding-bottom: 34px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 70px;
+    }
+
+    &-contents {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    &-content {
+        width: 33.3%;
+        border-radius: 10px;
+        border: 2px solid #C9C9C9;
+        background: #FFF;
+        padding: 0 3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include sp {
+            width: 100%;
+        }
+
+        .message-main {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .care-sub {
+            // background-color: orange;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 240%;
+            padding-bottom: 18px;
+            /* 38.4px */
+            // word-break: break-all;
+        }
+
+        img {
+            width: 187px;
+            height: 187px;
+            margin-top: auto;
+        }
+    }
+}
+
+.announce {
+    background: #F5FCF8;
+    height: 689px;
+
+    &-title {
+        padding-top: 82px;
+        padding-bottom: 70px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &-box {
+        width: 100%;
+        height: 390px;
+        border-radius: 30px;
+        background: #FFF;
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+        padding-bottom: 113px;
+        @include sp {
+            height: auto;
+            padding-bottom: 50px;
+        }
+    }
+
+    &-contents {
+        padding-top: 30px;
+        padding-bottom: 45px;
+    }
+
+    &-a-content {
+        height: 61px;
+        margin: 0 5.6%;
+        align-items: center;
+        display: flex;
+        gap: 30px;
+        border-bottom: 2px solid #E7E7E7;
+        @include sp {
+            height: auto;
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px 0;
+        }
+    }
+
+    .basic {
+        // background-color: aqua;
+        display: flex;
+        // justify-content: left;
+        gap: 30px;
+    }
+
+    .date {
+        color: #21A937;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .category {
+        width: 80px;
+        height: 25px;
+        color: #fff;
+        font-size: 12px;
+        background: #444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .information {
+        background-color: #fff;
+        // background-color: #21A937;
+        width: auto;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &-more {
+        padding: 0 50px;
+        font-size: 16px;
+        font-weight: 700;
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            img {
+                padding-top: 4px;
+            }
+        }
+        @include sp {
+            padding: 0;
+        }
+    }
+}
+
+.access {
+    padding-top: 196px;
+    padding-bottom: 139px;
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 34px;
+        @include sp {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &-map {
+        // background-color: aqua;
+        margin-left: 1px;
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 37.5%; /* 比率を4:3に固定 75/2 */
+        @include sp {
+            padding-bottom: 75%;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-right {
+        width: 88%;
+        @include sp {
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo-kamei {
+            display: flex;
+            gap: 16px;
+        }
+
+        .logo-kamei-image {
+            width: 10%;
+        }
+
+        .logo-kamei-name {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 20px;
+        }
+
+        .address {
+            padding-top: 52px;
+            padding-bottom: 25px;
+            display: flex;
+            gap: 16px;
+            @include sp {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .phone {
+            padding-bottom: 28px;
+            @include sp {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+
+    &-schedule {
+        // background-color: aqua;
+        width: 100%;
+        font-size: 14px;
+        font-weight: 400;
+        border-top: 2px solid #E7E7E7;
+        border-bottom: 2px solid #E7E7E7;
+        padding: 18px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        @include sp {
+            // text-align: center;
+            // width: minmax(294px, 375px);
+        }
+
+
+        &-active {
+            display: flex;
+            @include sp {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        &-left {
+            // background-color: pink;
+            width: 84px;
+            @include sp {
+                // width: 50px;
+            }
+            // width: minmax(56px,84px);
+            // width: 25%;
+        }
+
+        &-right {
+            // background-color: #21A937;
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            border-left: 2px solid #E7E7E7;
+            @include sp {
+                width: 100%;
+                max-width: 230px;
+            }
+        }
+
+        &-time {
+            // background-color: gray;
+            // padding-left: 28px;
+            margin-left: 28px;
+            display: flex;
+            gap: 23px;
+            align-items: center;
+            @include sp {
+                // width: 100%;
+                justify-content: space-between;
+            }
+        }
+
+        .week {
+            // background-color: aqua;
+            white-space: nowrap;
+            text-decoration: underline;
+            text-decoration-thickness: 0.3em;
+            /* 線の太さ */
+            text-decoration-color: #99E5A5;
+            /* 線の位置。テキストに重なるようにやや上部にする */
+            text-underline-offset: -0.1em;
+            /* 下線と文字列が重なる部分でも下線が省略されない（線が途切れない） */
+            text-decoration-skip-ink: none;
+        }
+
+        .day {
+            // background-color: orange;
+            display: flex;
+            gap: 17px;
+            @include sp {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+            }
+        }
+
+    }
+    .upper {
+        @include sp {
+            margin-top: 10px;
+        }
+    }
+}
+
+.message-main {
+    font-size: 24px;
+    font-weight: 700;
+
+    &-under {
+        font-size: 24px;
+        font-weight: 700;
+
+        text-decoration: underline;
+        text-decoration-thickness: 0.5em;
+        /* 線の太さ */
+        text-decoration-color: #99E5A5;
+        /* 線の位置。テキストに重なるようにやや上部にする */
+        text-underline-offset: -0.2em;
+        /* 下線と文字列が重なる部分でも下線が省略されない（線が途切れない） */
+        text-decoration-skip-ink: none;
+    }
+}
+
+.logo {
+    width: 263px;
+    height: 73px;
+}
+
+.credit {
+    font-size: 11px;
+    font-weight: 400;
+    padding-top: 22px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.phone a {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+
+    img {
+        width: 25px;
+        height: 25px;
+    }
+
+    p {
+        color: #21A937;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+}
+
+.header-inner-left {
+    display: flex;
+    gap: 10px;
+
+    .logo-kamei-image {
+        width: 10%;
+    }
+
+    .logo-kamei-name {
+        font-size: 24px;
+    }
+}
+
+.explain-right-photo {
+    width: 70%;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 100%;
+    }
+    .header-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+    // .header-inner-left .logo {
+    //     margin: 0 auto;
+        
+    //     height: 100%;
+    // }
+    
+    
+
+    .header-inner-right {
+        padding: 0 30px;
+        .header-inner-time {
+            font-size: 20px;
+        }
+        .phone {
+            margin: 0 auto;
+        }
+    }
+
+    .explain {
+        display: flex;
+        flex-direction: column;
+        &-left {
+            // padding-left: 10px;
+        }
+        .message-main-under {
+            // font-size: 30px;
+        }
+        .explain-sub {
+            // font-size: 20px;
+        }
+    }
+
+    
+
+    .care {
+        &-title {
+            h1 {
+                // font-size: 30px;
+            }
+            p {
+                // font-size: 20px;
+            }
+        }
+        &-contents {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        &-content {
+            
+        }
+    }
+
+    .announce {
+        .message-main-under {
+            font-size: 30px;
+        }
+
+        .information {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .access {
+        display: flex;
+        flex-direction: column;
+
+        &-map {
+            max-width: 100%;
+            height: auto;
+        }
+        
+    }
+}

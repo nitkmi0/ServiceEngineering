@@ -1,0 +1,559 @@
+@charset "UTF-8";
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #444;
+  font-style: normal;
+  line-height: normal;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 4%;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+}
+header .header-inner {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  header .header-inner {
+    padding: 0;
+  }
+}
+header .header-inner .phone a {
+  display: flex;
+  justify-content: flex-end;
+}
+header .header-inner-right {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+header .header-inner-time {
+  font-size: 14px;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  header .header-inner-time {
+    text-align: center;
+  }
+  header .header-inner-time span {
+    display: block;
+  }
+}
+
+.bg {
+  width: 100%;
+  height: 947px;
+  background: url(../images/hospital-background.jpg), lightgray 50%/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 133px;
+  padding-left: 11%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 80px;
+}
+@media (max-width: 768px) {
+  .bg {
+    background-position: 70%;
+    height: 600px;
+    gap: 40px;
+    padding-top: 35px;
+    padding-left: 5%;
+    padding-bottom: 5%;
+  }
+}
+.bg-message {
+  writing-mode: vertical-rl;
+  background: #FFF;
+  width: 102px;
+  height: 565px;
+  padding: 18px 37px 0 37px;
+  font-feature-settings: "vert" on;
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.bg-message span {
+  color: #21A937;
+}
+@media (max-width: 768px) {
+  .bg-message {
+    width: 20px;
+    height: 450px;
+    font-size: 24px;
+  }
+}
+
+.explain {
+  display: flex;
+  gap: 20px;
+  padding-top: 162px;
+  padding-bottom: 82px;
+}
+@media (max-width: 768px) {
+  .explain {
+    padding-top: 80px;
+  }
+}
+.explain-left {
+  width: 100%;
+  padding-top: 31px;
+  margin-left: 3%;
+  flex-basis: 40%;
+}
+.explain .message-main-under {
+  padding-bottom: 37px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.explain-sub {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 240%;
+  /* 38.4px */
+}
+.explain-sub span {
+  display: block;
+}
+.explain-right {
+  width: 65%;
+}
+@media (max-width: 768px) {
+  .explain-right {
+    width: 100%;
+  }
+}
+.explain-right-photo {
+  width: 100%;
+  height: auto;
+}
+
+.care {
+  background-color: #F5FCF8;
+}
+.care-title {
+  padding-top: 76px;
+  padding-bottom: 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+}
+.care-contents {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.care-content {
+  width: 33.3%;
+  border-radius: 10px;
+  border: 2px solid #C9C9C9;
+  background: #FFF;
+  padding: 0 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .care-content {
+    width: 100%;
+  }
+}
+.care-content .message-main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.care-content .care-sub {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 240%;
+  padding-bottom: 18px;
+  /* 38.4px */
+}
+.care-content img {
+  width: 187px;
+  height: 187px;
+  margin-top: auto;
+}
+
+.announce {
+  background: #F5FCF8;
+  height: 689px;
+}
+.announce-title {
+  padding-top: 82px;
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: center;
+}
+.announce-box {
+  width: 100%;
+  height: 390px;
+  border-radius: 30px;
+  background: #FFF;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  padding-bottom: 113px;
+}
+@media (max-width: 768px) {
+  .announce-box {
+    height: auto;
+    padding-bottom: 50px;
+  }
+}
+.announce-contents {
+  padding-top: 30px;
+  padding-bottom: 45px;
+}
+.announce-a-content {
+  height: 61px;
+  margin: 0 5.6%;
+  align-items: center;
+  display: flex;
+  gap: 30px;
+  border-bottom: 2px solid #E7E7E7;
+}
+@media (max-width: 768px) {
+  .announce-a-content {
+    height: auto;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+  }
+}
+.announce .basic {
+  display: flex;
+  gap: 30px;
+}
+.announce .date {
+  color: #21A937;
+  font-size: 16px;
+  font-weight: 700;
+}
+.announce .category {
+  width: 80px;
+  height: 25px;
+  color: #fff;
+  font-size: 12px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.announce .information {
+  background-color: #fff;
+  width: auto;
+  font-size: 16px;
+  font-weight: 700;
+}
+.announce-more {
+  padding: 0 50px;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.announce-more a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.announce-more a img {
+  padding-top: 4px;
+}
+@media (max-width: 768px) {
+  .announce-more {
+    padding: 0;
+  }
+}
+
+.access {
+  padding-top: 196px;
+  padding-bottom: 139px;
+}
+.access .wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 34px;
+}
+@media (max-width: 768px) {
+  .access .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.access-map {
+  margin-left: 1px;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 37.5%; /* 比率を4:3に固定 75/2 */
+}
+@media (max-width: 768px) {
+  .access-map {
+    padding-bottom: 75%;
+  }
+}
+.access-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.access-right {
+  width: 88%;
+}
+@media (max-width: 768px) {
+  .access-right {
+    width: 100%;
+    text-align: center;
+  }
+}
+.access-right .logo-kamei {
+  display: flex;
+  gap: 16px;
+}
+.access-right .logo-kamei-image {
+  width: 10%;
+}
+.access-right .logo-kamei-name {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 20px;
+}
+.access-right .address {
+  padding-top: 52px;
+  padding-bottom: 25px;
+  display: flex;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .access-right .address {
+    display: flex;
+    justify-content: center;
+  }
+}
+.access-right .phone {
+  padding-bottom: 28px;
+}
+@media (max-width: 768px) {
+  .access-right .phone {
+    display: flex;
+    justify-content: center;
+  }
+}
+.access-schedule {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  border-top: 2px solid #E7E7E7;
+  border-bottom: 2px solid #E7E7E7;
+  padding: 18px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+.access-schedule-active {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .access-schedule-active {
+    display: flex;
+    justify-content: center;
+  }
+}
+.access-schedule-left {
+  width: 84px;
+}
+.access-schedule-right {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  border-left: 2px solid #E7E7E7;
+}
+@media (max-width: 768px) {
+  .access-schedule-right {
+    width: 100%;
+    max-width: 230px;
+  }
+}
+.access-schedule-time {
+  margin-left: 28px;
+  display: flex;
+  gap: 23px;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .access-schedule-time {
+    justify-content: space-between;
+  }
+}
+.access-schedule .week {
+  white-space: nowrap;
+  text-decoration: underline;
+  text-decoration-thickness: 0.3em;
+  /* 線の太さ */
+  text-decoration-color: #99E5A5;
+  /* 線の位置。テキストに重なるようにやや上部にする */
+  text-underline-offset: -0.1em;
+  /* 下線と文字列が重なる部分でも下線が省略されない（線が途切れない） */
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.access-schedule .day {
+  display: flex;
+  gap: 17px;
+}
+@media (max-width: 768px) {
+  .access-schedule .day {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
+@media (max-width: 768px) {
+  .access .upper {
+    margin-top: 10px;
+  }
+}
+
+.message-main {
+  font-size: 24px;
+  font-weight: 700;
+}
+.message-main-under {
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5em;
+  /* 線の太さ */
+  text-decoration-color: #99E5A5;
+  /* 線の位置。テキストに重なるようにやや上部にする */
+  text-underline-offset: -0.2em;
+  /* 下線と文字列が重なる部分でも下線が省略されない（線が途切れない） */
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+
+.logo {
+  width: 263px;
+  height: 73px;
+}
+
+.credit {
+  font-size: 11px;
+  font-weight: 400;
+  padding-top: 22px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.phone a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.phone a img {
+  width: 25px;
+  height: 25px;
+}
+.phone a p {
+  color: #21A937;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header-inner-left {
+  display: flex;
+  gap: 10px;
+}
+.header-inner-left .logo-kamei-image {
+  width: 10%;
+}
+.header-inner-left .logo-kamei-name {
+  font-size: 24px;
+}
+
+.explain-right-photo {
+  width: 70%;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100%;
+  }
+  .header-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+  }
+  .header-inner-right {
+    padding: 0 30px;
+  }
+  .header-inner-right .header-inner-time {
+    font-size: 20px;
+  }
+  .header-inner-right .phone {
+    margin: 0 auto;
+  }
+  .explain {
+    display: flex;
+    flex-direction: column;
+  }
+  .care-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .announce .message-main-under {
+    font-size: 30px;
+  }
+  .announce .information {
+    display: block;
+    width: 100%;
+  }
+  .access {
+    display: flex;
+    flex-direction: column;
+  }
+  .access-map {
+    max-width: 100%;
+    height: auto;
+  }
+}/*# sourceMappingURL=style.css.map */
